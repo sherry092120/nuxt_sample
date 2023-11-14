@@ -1,0 +1,165 @@
+// $color: #F9D35E;
+// $color2: #00B589;
+// $color3: #E5770D;
+// $color4: #285234;
+// $color5: #F2F2F4;
+// $color_w: #ffffff;
+
+// $color_text: #5F1922;
+// $color_text2: #69232C;
+// $color_text3: #5F1922;
+// $color_text4: #C98F2A;
+// $color_text5: #8F4225;
+// $color_text6: #C56407;
+// $color_text_b: #000000;
+// $color_text_bl: #909090;
+// $color_text_bd: #6C6C6C;
+
+// $color_icon: #C98F2A;
+
+// $item_border_bottom: 2px solid #DCDCDC;
+
+// // $font1: 'Noto Sans TC', sans-serif;
+// // $font2: 'Hi Melody';
+// // $font3: 'Neucha';
+// $font1: '微軟正黑體';
+// $font2: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+// $font3: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$primary: #EA7F1B;
+$color-title: #45280D;
+$color-content: #505050;
+
+$font-size-nav-en: 18px;
+$letter-spacing-nav-en: calc(18px * 0.06);
+
+$height-nav: 130px;
+$height-nav-xxl: 95px;
+$height-nav-l: 75px;
+$height-nav-s: 52px;
+
+
+
+@mixin xxl {
+    @media ( max-width: 1439px ) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media ( max-width: 1199px ) {
+        @content;
+    }
+}
+@mixin l {
+    @media ( max-width: 991px ) {
+        @content;
+    }
+}
+
+@mixin m {
+    @media ( max-width: 767px ) {
+        @content;
+    }
+}
+
+@mixin s {
+    @media ( max-width: 575px ) {
+        @content;
+    }
+}
+
+@mixin c($custom) {
+    @media ( max-width: $custom ) {
+        @content;
+    }
+}
+
+@mixin max-width($maxWidth: 1400px) {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    @include xxl{
+        max-width: 1200px;
+    }
+    @include xl{
+        max-width: 992px;
+    }
+    @include l{
+        max-width: 768px;
+    }
+    @include m{
+        max-width: 576px;
+    }
+    @include s{
+        max-width: 100%;
+    }
+}
+// 方便除錯用___________________________________________________
+@mixin border($color:red , $width: 1px) {
+    border: $width solid $color;
+}
+@mixin bg($color:rgb(206, 206, 206)) {
+    background-color: $color;
+}
+// CSS3跨跨瀏覽器用___________________________________________________
+@mixin prefix($property,$val) {
+    @each $prefix in '' -webkit- -moz- -o- -ms- { 
+        #{$prefix}#{$property}: $val;
+    }
+}
+@mixin square($width) {
+    width: $width;
+    height: $width;
+}
+@mixin btn-big($colorbg,$colortext) {
+    font-size: 28px;
+    padding: 0 40px;
+    line-height: 50px;
+    height: 50px;
+    min-width: 170px;
+    border-radius: 25px;
+    background-color: $colorbg;
+    color: $colortext;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    @include xxl{
+        font-size: 22px;
+        line-height: 45px;
+        height: 45px;
+        padding: 0 30px;
+        min-width: 130px;
+    }
+    @include l{
+        font-size: 16px;
+        line-height: 35px;
+        height: 35px;
+        padding: 0 20px;
+        min-width: 100px;
+    }
+}
+@mixin btn-small($colorbg,$colortext) {
+    font-size: 20px;
+    padding: 0 30px;
+    line-height: 50px;
+    height: 50px;
+    min-width: 170px;
+    border-radius: 25px;
+    background-color: $colorbg;
+    color: $colortext;
+    display: inline-block;
+    cursor: pointer;
+    @include xxl{
+        font-size: 16px;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 20px;
+        min-width: 130px;
+    }
+    @include l{
+        font-size: 14px;
+        line-height: 35px;
+        height: 35px;
+        padding: 0 15px;
+        min-width: 120px;
+    }
+}

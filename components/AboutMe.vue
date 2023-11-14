@@ -1,0 +1,79 @@
+<template>
+    <div class="about-wrap">
+        <div class="title-block">
+            <div class="en title_en">About me</div>
+            <div class="title">立法委員<br>候選人主張</div>
+        </div>
+        <div class="content-block content" v-html="content"></div>
+        <div class="images-block">
+            <img class="image-bg" :src="$imagePath+'bg_orange_684x534.png'">
+            <img class="image-cat" :src="$imagePath+'cat_658x658.png'">
+            <div class="title name">喵立翰</div>
+            <div class="en name_en">Miao Li-Han</div>
+        </div>
+    </div>
+</template>
+  
+<script setup>
+const { $imagePath } = useNuxtApp();
+const content = ref('我堅信，藉由推動更完善的貓咪福利和相關政策，更是間接地投資於台灣的未來。畢竟，民眾的身心健康與工作熱情是推動經濟的核心動力。透過完善的貓咪福利政策，為台灣的 GDP 經濟帶來巨大效益。<br>因此，我期望能在立法院內推進這些政策，確保每一隻貓咪都能得到他們應有的照顧，同時也為台灣的經濟發展助一臂之力。讓我們一同護航台灣的幸福經濟，從照顧每一隻貓咪開始。')
+
+</script>
+  
+<style lang="scss" scoped>
+@import "@/assets/scss/var";
+.about-wrap{
+    @include max-width;
+    padding: 231px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 1076px;
+    .title-block{
+        width: 50%;
+        .title_en{
+            margin-bottom: 10px;
+        }
+        .title{
+            margin-bottom: 80px;
+        }
+    }
+    .content-block{
+        width: 50%;
+        margin-right: 46px;
+    }
+    .images-block{
+        padding-left: 46px;
+        position: relative;
+        .image-cat{
+            position: relative;
+            @include square(658px); /* 原圖630px + 陰影 28px */
+            object-fit: contain;
+        }
+        .image-bg{
+            width: 683px;
+            height: 532px;
+            object-fit: contain;
+            position: absolute;
+            top: 208px;
+            left: calc(75px + 46px); /* left padding 46px */
+        }
+        .name{
+            position: absolute;
+            bottom: calc(105px + 28px); /* 陰影 28px */
+            right: 5.6px; /* 陰影 28px - letter-spacing 22.4px */
+        }
+        .name_en{
+            position: absolute;
+            bottom: calc(24px + 28px); /* 陰影 28px */
+            right: 28px; /* 陰影 28px */
+            font-size: 50px;
+            line-height: 72.25px;
+            letter-spacing: calc(50px * 0.08);
+            font-weight: 500;
+        }
+
+    }
+}
+
+</style>

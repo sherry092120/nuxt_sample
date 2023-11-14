@@ -1,0 +1,44 @@
+@import "./var";
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Noto+Sans&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Noto+Sans+TC:wght@400&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    // font-family: 'Noto Sans TC', sans-serif;
+}
+.en{
+    font-family: 'Jost', sans-serif;
+}
+body{
+    margin: 0;
+}
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.title{
+    font-size: 80px;
+    letter-spacing: calc(80px * 0.28);
+    line-height: 100px;
+    font-weight: 800;
+    color: $color-title;
+}
+.title_en{
+    font-size: 30px;
+    letter-spacing: calc(30px * 0.06);
+    line-height: 50px;
+    font-weight: 400;
+    color: $primary;
+}
+.content{
+    font-size: 16px;
+    letter-spacing: calc(16px * 0.24);
+    line-height: 30px;
+    font-weight: 400;
+    color: $color-content;
+}
+
+
+
