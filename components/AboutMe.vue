@@ -1,5 +1,6 @@
 <template>
-    <div class="about-wrap">
+    <div style="width: 100%; overflow: hidden;">
+        <div class="about-wrap">
         <div class="title-block">
             <div class="en title_en">About me</div>
             <div class="title">立法委員<br>候選人主張</div>
@@ -11,6 +12,7 @@
             <div class="title name">喵立翰</div>
             <div class="en name_en">Miao Li-Han</div>
         </div>
+    </div>
     </div>
 </template>
   
@@ -29,26 +31,53 @@ const content = ref('我堅信，藉由推動更完善的貓咪福利和相關�
     flex-wrap: wrap;
     flex-direction: column;
     height: 1076px;
+    @include xxl{
+        height: 934px;
+        padding: 197px 0;
+    }
+    @include xl{
+        height: 868px;
+        padding: 180px 0;
+        justify-content: center;
+    }
     .title-block{
         width: 50%;
         .title_en{
             margin-bottom: 10px;
+            @include xxl{
+                margin-bottom: 8px;    
+            }
         }
         .title{
             margin-bottom: 80px;
+            @include xxl{
+                margin-bottom: 50px;    
+            }
         }
     }
     .content-block{
         width: 50%;
-        margin-right: 46px;
+        padding-right: 46px;
+        @include xxl{
+            padding-right: 30px;
+        }
     }
     .images-block{
         padding-left: 46px;
         position: relative;
+        @include xxl{
+            padding-left: 30px;
+        }
         .image-cat{
             position: relative;
             @include square(658px); /* 原圖630px + 陰影 28px */
             object-fit: contain;
+            @include xxl{
+                @include square(568px); 
+            }
+            @include xl{
+                @include square(486px); 
+            }
         }
         .image-bg{
             width: 683px;
@@ -57,11 +86,26 @@ const content = ref('我堅信，藉由推動更完善的貓咪福利和相關�
             position: absolute;
             top: 208px;
             left: calc(75px + 46px); /* left padding 46px */
+            @include xxl{
+                width: 613px;
+                height: 477px;
+                top: 190px;
+                left: calc(70px + 30px); /* left padding 30px */
+            }
+            @include xl{
+                width: 533px;
+                height: 415px;
+                top: 165px;
+                left: calc(65px + 30px); /* left padding 30px */
+            }
         }
         .name{
             position: absolute;
             bottom: calc(105px + 28px); /* 陰影 28px */
             right: 5.6px; /* 陰影 28px - letter-spacing 22.4px */
+            @include xl{
+                bottom: 90px;
+            }
         }
         .name_en{
             position: absolute;
@@ -71,6 +115,9 @@ const content = ref('我堅信，藉由推動更完善的貓咪福利和相關�
             line-height: 72.25px;
             letter-spacing: calc(50px * 0.08);
             font-weight: 500;
+            @include xl{
+                bottom: 10px;
+            }
         }
 
     }
