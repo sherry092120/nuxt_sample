@@ -75,6 +75,9 @@ onMounted(()=>{
     .bg1{
         position: absolute;
         top: 10%;
+        @include m{
+            top: 3%;
+        }
     }
     .bg2{
         position: relative;

@@ -40,8 +40,18 @@ const content = ref('我堅信，藉由推動更完善的貓咪福利和相關�
         padding: 180px 0;
         justify-content: center;
     }
+    @include l{
+        flex-direction: row;
+        height: auto;
+        padding: 90px 0 60px;
+    }
     .title-block{
         width: 50%;
+        @include l{
+            width: 100%;
+            order: 1;
+            text-align: center;
+        }
         .title_en{
             margin-bottom: 10px;
             @include xxl{
@@ -53,6 +63,9 @@ const content = ref('我堅信，藉由推動更完善的貓咪福利和相關�
             @include xxl{
                 margin-bottom: 50px;    
             }
+            @include l{
+                margin-bottom: 30px;
+            }
         }
     }
     .content-block{
@@ -61,12 +74,25 @@ const content = ref('我堅信，藉由推動更完善的貓咪福利和相關�
         @include xxl{
             padding-right: 30px;
         }
+        @include l{
+            width: 100%;
+            order: 3;
+            padding: 60px 30px 0;
+            text-align: center;
+        }
     }
     .images-block{
         padding-left: 46px;
         position: relative;
         @include xxl{
             padding-left: 30px;
+        }
+        @include l{
+            width: 100%;
+            order: 2;
+            padding: 0 30px;
+            display: flex;
+            justify-content: center;
         }
         .image-cat{
             position: relative;
@@ -78,6 +104,11 @@ const content = ref('我堅信，藉由推動更完善的貓咪福利和相關�
             @include xl{
                 @include square(486px); 
             }
+            @include s{
+                @include square(100%); 
+                left: 2%;
+            }
+
         }
         .image-bg{
             width: 683px;
@@ -98,6 +129,18 @@ const content = ref('我堅信，藉由推動更完善的貓咪福利和相關�
                 top: 165px;
                 left: calc(65px + 30px); /* left padding 30px */
             }
+            @include xl{
+                width: 471px;
+                height: 367px;
+                top: 30%;
+                left: 21%;
+            }
+            @include s{
+                width: 84.8%;
+                height: auto;
+                top: 31%;
+                left: 11%;
+            }
         }
         .name{
             position: absolute;
@@ -105,6 +148,23 @@ const content = ref('我堅信，藉由推動更完善的貓咪福利和相關�
             right: 5.6px; /* 陰影 28px - letter-spacing 22.4px */
             @include xl{
                 bottom: 90px;
+            }
+            @include l{
+                bottom: 19%;
+            }
+            @include m{
+                font-size: 40px;
+                line-height: 50px;
+                letter-spacing: calc(40px * 0.28);
+                right: 13.6px;
+                bottom: 16%;
+            }
+            @include s{
+                font-size: 24px;
+                line-height: 30px;
+                letter-spacing: calc(24px * 0.28);
+                right: 22.6px;
+                bottom: 14.5%;
             }
         }
         .name_en{
@@ -117,6 +177,21 @@ const content = ref('我堅信，藉由推動更完善的貓咪福利和相關�
             font-weight: 500;
             @include xl{
                 bottom: 10px;
+            }
+            @include l{
+                bottom: 5%;
+            }
+            @include m{
+                font-size: 35px;
+                line-height: 45px;
+                letter-spacing: calc(35px * 0.08);
+                font-weight: 500;
+            }
+            @include s{
+                font-size: 18px;
+                line-height: 26px;
+                letter-spacing: calc(18px * 0.08);
+                font-weight: 500;
             }
         }
 
