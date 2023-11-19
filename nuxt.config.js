@@ -5,5 +5,8 @@ export default defineNuxtConfig({
   typescript: { typeCheck: true },
   build: {
     transplie: [/^element-plus/]
+  },
+  router: {
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/nuxt-landing-page/dist/' : '/'
   }
 })
