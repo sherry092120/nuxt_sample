@@ -11,7 +11,7 @@
             <el-carousel-item v-for="item in 4" :key="item" style="height: auto;">
                 <div class="outter">
                     <div class="img">
-                        <img src="@/assets/image/cat_donate.jpg">
+                        <img :src="$imagePath+'cat_donate.jpg'">
                         <div class="cover"></div>
                     </div>
                     <div class="inner">

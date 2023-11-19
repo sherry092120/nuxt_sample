@@ -7,8 +7,8 @@
             </div>
             <div class="content-block content" v-html="content"></div>
             <div class="images-block">
-                <img class="image-bg" src="@/assets/image/bg_orange_684x534.png">
-                <img class="image-cat" src="@/assets/image/cat_658x658.png">
+                <img class="image-bg" :src="$imagePath+'bg_orange_684x534.png'">
+                <img class="image-cat" :src="$imagePath+'cat_658x658.png'">
                 <div class="title name">喵立翰</div>
                 <div class="en name_en">Miao Li-Han</div>
             </div>

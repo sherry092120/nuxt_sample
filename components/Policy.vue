@@ -7,7 +7,7 @@
         <el-carousel id="vertical" direction="vertical" :autoplay="false">
             <el-carousel-item v-for="item in 4" :key="item">
                 <div class="carousel-wrap">
-                    <div class="left"><img src="@/assets/image/cat_policy.jpg"></div>
+                    <div class="left"><img :src="$imagePath+'cat_policy.jpg'"></div>
                     <div class="right">
                     <div class="carousel-title">為毛孩子謀福利！推動寵物醫療保障方案</div>
                     <ol class="carousel-content content">
@@ -22,7 +22,7 @@
         <el-carousel id="carousel-m" trigger="click" height="auto" arrow="never" indicator-position="outside">
             <el-carousel-item v-for="item in 4" :key="item" style="height: auto">
                 <div class="carousel-wrap">
-                    <div class="top"><img src="@/assets/image/cat_policy.jpg"></div>
+                    <div class="top"><img :src="$imagePath+'cat_policy.jpg'"></div>
                     <div class="bottom">
                         <div class="carousel-title">為毛孩子謀福利！推動寵物醫療保障方案</div>
                         <ol class="carousel-content content">

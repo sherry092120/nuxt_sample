@@ -9,14 +9,14 @@
             <ul>
                 <li v-for="item in nav.right" class="en">{{ item }}</li>
                 <li class="icons">
-                    <img src="@/assets/image/fb.svg">
-                    <img src="@/assets/image/ig.svg">
-                    <img src="@/assets/image/yt.svg">
-                    <img src="@/assets/image/line.svg">
+                    <img :src="$imagePath+'fb.svg'">
+                    <img :src="$imagePath+'ig.svg'">
+                    <img :src="$imagePath+'yt.svg'">
+                    <img :src="$imagePath+'line.svg'">
                 </li>
             </ul>
         </div>
-        <div class="logo"><img src="@/assets/image/logo_166x166.png"></div>
+        <div class="logo"><img :src="$imagePath+'logo_166x166.png'"></div>
     </nav>
 </template>
   

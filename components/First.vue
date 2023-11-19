@@ -4,8 +4,8 @@
         <div class="bg bg2"><img :src="$imagePath+bg_top_image_name"></div>
         <div class="content">
             <div class="slogan">台灣的明天，<br>喵先鋪路</div>
-            <img class="fish fish-small" src="@/assets/image/fish_98x47.png">
-            <img class="fish fish-big" src="@/assets/image/fish_148x71.png">
+            <img class="fish fish-small" :src="$imagePath+'fish_98x47.png'">
+            <img class="fish fish-big" :src="$imagePath+'fish_148x71.png'">
         </div>
     </div>
 </template>
