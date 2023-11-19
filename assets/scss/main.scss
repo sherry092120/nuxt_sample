@@ -51,6 +51,28 @@ ul, li{
         line-height: 40px;
     }
 }
+.title-block{
+    @include l{
+        width: 100%;
+        order: 1;
+        text-align: center;
+    }
+    .title_en{
+        margin-bottom: 10px;
+        @include xxl{
+            margin-bottom: 8px;    
+        }
+    }
+    .title{
+        margin-bottom: 80px;
+        @include xxl{
+            margin-bottom: 50px;    
+        }
+        @include l{
+            margin-bottom: 30px;
+        }
+    }
+}
 .content{
     font-size: 16px;
     letter-spacing: calc(16px * 0.24);
@@ -63,5 +85,33 @@ ul, li{
     }
 }
 
+.primary-btn{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: calc(16px * 0.24);
+    color: #fff;
+    background-color: $primary;
+    border-radius: 8px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
+.carousel-title, .sub-title{
+    color: $color-content;
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: calc(30px * 0.24);
+    @include s{
+        font-size: 24px;
+        line-height: 35px;
+        letter-spacing: calc(24px * 0.24);
+    }
+}
 

@@ -4,6 +4,11 @@
   </header>
   <First></First>
   <AboutMe></AboutMe>
+  <LastActivity></LastActivity>
+  <Policy></Policy>
+  <Donate></Donate>
+  <Feedback></Feedback>
+  <MyFooter></MyFooter>
 </template>
 
 <script setup>

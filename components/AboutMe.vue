@@ -1,18 +1,18 @@
 <template>
     <div style="width: 100%; overflow: hidden;">
         <div class="about-wrap">
-        <div class="title-block">
-            <div class="en title_en">About me</div>
-            <div class="title">立法委員<br>候選人主張</div>
+            <div class="title-block">
+                <div class="en title_en">About me</div>
+                <div class="title">立法委員<br>候選人主張</div>
+            </div>
+            <div class="content-block content" v-html="content"></div>
+            <div class="images-block">
+                <img class="image-bg" :src="$imagePath+'bg_orange_684x534.png'">
+                <img class="image-cat" :src="$imagePath+'cat_658x658.png'">
+                <div class="title name">喵立翰</div>
+                <div class="en name_en">Miao Li-Han</div>
+            </div>
         </div>
-        <div class="content-block content" v-html="content"></div>
-        <div class="images-block">
-            <img class="image-bg" :src="$imagePath+'bg_orange_684x534.png'">
-            <img class="image-cat" :src="$imagePath+'cat_658x658.png'">
-            <div class="title name">喵立翰</div>
-            <div class="en name_en">Miao Li-Han</div>
-        </div>
-    </div>
     </div>
 </template>
   
@@ -49,23 +49,6 @@ const content = ref('我堅信，藉由推動更完善的貓咪福利和相關�
         width: 50%;
         @include l{
             width: 100%;
-            order: 1;
-            text-align: center;
-        }
-        .title_en{
-            margin-bottom: 10px;
-            @include xxl{
-                margin-bottom: 8px;    
-            }
-        }
-        .title{
-            margin-bottom: 80px;
-            @include xxl{
-                margin-bottom: 50px;    
-            }
-            @include l{
-                margin-bottom: 30px;
-            }
         }
     }
     .content-block{
